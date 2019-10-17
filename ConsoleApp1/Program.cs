@@ -20,7 +20,7 @@ namespace ConsoleApp1
                 input = int.Parse(input_str);
 
 
-                if (inprt==guess)
+                if (input==guess)
                 {
                     break;
                 }
