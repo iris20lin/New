@@ -10,26 +10,33 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int input = 0;
+            int input = -1;
             int guess = 55;
 
-            while (true)
+            //產生亂數
+            guess = new Random().Next(100);
+            Console.WriteLine("請輸入一個數字(0-100):");
+
+            while (true)  //game loop 
             {
-                string input_str = Console.ReadLine();
-                int guess = new Random().Next(100); //0-100
+                //決定輸入內容
+                string input_str = Console.ReadLine();  //input  string 
                 input = int.Parse(input_str);
 
-
-                if (input==guess)
+                //離開條件 
+                if (input == guess)
                 {
+                    Console.WriteLine("恭喜你答對了!");
                     break;
                 }
-                Console.WriteLine("gg");
+                //提示
+                Console.WriteLine("猜錯了，再來一次！");
             }
-            
-            
-            Console.ReadKey();
 
+            Console.WriteLine("PAUSE");
+            Console.ReadKey();
         }
+
     }
-}
+    }
+
